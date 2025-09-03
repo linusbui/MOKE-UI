@@ -1,0 +1,1 @@
+A_s*Delta_H*sin(alpha)/2 - 3*A_s*Delta_H*sin(3*alpha)/4 - A_s*Delta_H*sin(5*alpha)/4 + A_s*G6*K1*cos(3*alpha)/epsilon_d - 3*A_s*H3*cos(alpha)/2 + A_s*H3*cos(3*alpha)/2 - B_s*Delta_H*sin(4*alpha)/2 + B_s*Delta_H*cos(2*alpha) + B_s*K1

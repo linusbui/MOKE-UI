@@ -1,0 +1,1 @@
+-sqrt(2)*A_s*Delta_G*K1*sin(3*alpha + pi/4)/(6*epsilon_d) - sqrt(6)*A_s*Delta_H*sin(3*alpha + pi/12)/6 - sqrt(2)*A_s*H1*cos(3*alpha + 5*pi/12)/6 + sqrt(2)*A_s*H2*sin(3*alpha + pi/4)/2 + sqrt(2)*A_s*H3*cos(3*alpha + pi/12)/2 + B_s*Delta_H/4 + B_s*H1/4 - 3*B_s*H2/2 + 3*B_s*H3/4 + B_s*K1

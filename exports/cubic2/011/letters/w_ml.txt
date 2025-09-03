@@ -1,0 +1,1 @@
+B_s*(6*Delta_H*sin(alpha)**4 - 4*Delta_H*sin(alpha)**2 - 3*H1*sin(alpha)**4 + 2*H1*sin(alpha)**2 + H1 - 9*H2*sin(alpha)**4 + 6*H2*sin(alpha)**2 - 3*H2 + 2*K1)/2

@@ -1,0 +1,1 @@
+-A_s*(2*K1**2 - epsilon_d*(-Delta_G*cos(4*alpha) + Delta_G + 4*G3))/(2*epsilon_d)

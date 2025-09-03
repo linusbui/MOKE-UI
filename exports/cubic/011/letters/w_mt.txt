@@ -1,0 +1,1 @@
+A_s*Delta_H*sin(alpha)/16 - 3*A_s*Delta_H*sin(3*alpha)/16 - A_s*H1*sin(alpha)/16 + 3*A_s*H1*sin(3*alpha)/16 + 3*A_s*H3*sin(alpha)/16 - 9*A_s*H3*sin(3*alpha)/16 - 3*B_s*Delta_H*sin(2*alpha)/16 - 9*B_s*Delta_H*sin(4*alpha)/32 + B_s*H1*sin(2*alpha)/16 + 3*B_s*H1*sin(4*alpha)/32 + 3*B_s*H2*sin(2*alpha)/8 + 9*B_s*H2*sin(4*alpha)/16 + 3*B_s*H3*sin(2*alpha)/16 + 9*B_s*H3*sin(4*alpha)/32

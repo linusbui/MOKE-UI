@@ -1,0 +1,1 @@
+A_s*G8*sin(4*alpha) + 2*B_s*G6*sin(3*alpha)
