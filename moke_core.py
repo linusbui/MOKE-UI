@@ -64,6 +64,7 @@ def core_eps(mo: list, magn_rep: str):
 
 def core_kerr(full_eps: Matrix, magn_rep: str, polar: str):
     M = magnetization_rep(magn_rep)
+    M[2] = 0            # simplify with only in-plane magnetization
     kerr = kerr_angles(full_eps, M, polar)
     return kerr
 

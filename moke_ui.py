@@ -157,7 +157,7 @@ def ui_routine():
 
     eps = get_eps(crystal, orient, mo_rot, magn_rep)
     kerr, kerr_l = get_kerr(crystal, orient, eps, magn_rep, polar)
-    eight = get_eight(crystal, orient, kerr, magn_rep)
+    eight = get_eight(crystal, orient, kerr, magn_rep, polar)
 
     # plotting
     draw_latex_MO(mo_show, magn_rep)
@@ -288,11 +288,11 @@ def get_kerr(crystal: str, orient: str, full_eps: Matrix, magn_rep: str, polar: 
     return kerr, latex(kerr)
 
 
-def get_eight(crystal: str, orient: str, kerr: Symbol, magn_rep: str):
-    fp_eight_ml = os.path.join('exports', crystal, orient, magn_rep, 'w_ml.txt')
-    fp_eight_mt = os.path.join('exports', crystal, orient, magn_rep, 'w_mt.txt')
-    fp_eight_mtml = os.path.join('exports', crystal, orient, magn_rep, 'w_mtml.txt')
-    fp_eight_mt2ml2 = os.path.join('exports', crystal, orient, magn_rep, 'w_mt2ml2.txt')
+def get_eight(crystal: str, orient: str, kerr: Symbol, magn_rep: str, polar: str):
+    fp_eight_ml = os.path.join('exports', crystal, orient, magn_rep, polar, 'w_ml.txt')
+    fp_eight_mt = os.path.join('exports', crystal, orient, magn_rep, polar, 'w_mt.txt')
+    fp_eight_mtml = os.path.join('exports', crystal, orient, magn_rep, polar, 'w_mtml.txt')
+    fp_eight_mt2ml2 = os.path.join('exports', crystal, orient, magn_rep, polar, 'w_mt2ml2.txt')
 
     if (os.path.isfile(fp_eight_ml) and os.path.isfile(fp_eight_mt) and os.path.isfile(fp_eight_mtml) and
         os.path.isfile(fp_eight_ml) and fp_eight_mt2ml2):
@@ -367,8 +367,9 @@ def draw_epsilon(latex_eps: list):
     draw_latex(w_xy, canvas_xy, 0, offset_text, latex_eps[3])
     draw_latex(w_yx, canvas_yx, 0, offset_text, latex_eps[4])
 
-    draw_latex(w_xz, canvas_xz, 0, offset_text, latex_eps[5])
-    draw_latex(w_zx, canvas_zx, 0, offset_text, latex_eps[6])
+    # swapped for readablility
+    draw_latex(w_xz, canvas_xz, 0, offset_text, latex_eps[6])
+    draw_latex(w_zx, canvas_zx, 0, offset_text, latex_eps[5])
 
     draw_latex(w_yz, canvas_yz, 0, offset_text, latex_eps[7])
     draw_latex(w_zy, canvas_zy, 0, offset_text, latex_eps[8])
@@ -601,9 +602,11 @@ eyy_container.grid(row=1)
 ezz_container = Frame(scroll_container_diag.scrollable_frame)
 ezz_container.grid(row=2)
 
-w_xx, canvas_xx = setup_plot(750, 50, exx_container)
-w_yy, canvas_yy = setup_plot(750, 50, eyy_container)
-w_zz, canvas_zz = setup_plot(750, 50, ezz_container)
+diag_width = 1500
+
+w_xx, canvas_xx = setup_plot(diag_width, 50, exx_container)
+w_yy, canvas_yy = setup_plot(diag_width, 50, eyy_container)
+w_zz, canvas_zz = setup_plot(diag_width, 50, ezz_container)
 
 
 # off diags
@@ -628,8 +631,10 @@ exy_container.grid(row=3)
 eyx_container = Frame(scroll_container_off.scrollable_frame)
 eyx_container.grid(row=4)
 
-w_xy, canvas_xy = setup_plot(1600, 50, exy_container)
-w_yx, canvas_yx = setup_plot(1600, 50, eyx_container)
+off_diag_width = 3000
+
+w_xy, canvas_xy = setup_plot(off_diag_width, 50, exy_container)
+w_yx, canvas_yx = setup_plot(off_diag_width, 50, eyx_container)
 
 
 exz_container = Frame(scroll_container_off.scrollable_frame)
@@ -637,8 +642,8 @@ exz_container.grid(row=PAD_SMALL)
 ezx_container = Frame(scroll_container_off.scrollable_frame)
 ezx_container.grid(row=6)
 
-w_xz, canvas_xz = setup_plot(1600, 50, exz_container)
-w_zx, canvas_zx = setup_plot(1600, 50, ezx_container)
+w_xz, canvas_xz = setup_plot(off_diag_width, 50, exz_container)
+w_zx, canvas_zx = setup_plot(off_diag_width, 50, ezx_container)
 
 
 eyz_container = Frame(scroll_container_off.scrollable_frame)
@@ -646,8 +651,8 @@ eyz_container.grid(row=7)
 ezy_container = Frame(scroll_container_off.scrollable_frame)
 ezy_container.grid(row=8)
 
-w_yz, canvas_yz = setup_plot(1600, 50, eyz_container)
-w_zy, canvas_zy = setup_plot(1600, 50, ezy_container)
+w_yz, canvas_yz = setup_plot(off_diag_width, 50, eyz_container)
+w_zy, canvas_zy = setup_plot(off_diag_width, 50, ezy_container)
 
 
 # kerr angles
@@ -661,7 +666,7 @@ scroll_container_kerr.pack(expand=True)
 kerr_container = Frame(scroll_container_kerr.scrollable_frame)
 kerr_container.grid(row=0)
 
-w_kerr, canvas_kerr = setup_plot(1600, 50, kerr_container)
+w_kerr, canvas_kerr = setup_plot(3000, 50, kerr_container)
 
 
 # eight directional methods

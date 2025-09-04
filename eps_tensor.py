@@ -110,9 +110,9 @@ def kerr_angles(eps: Matrix, M: list, polar: str):
     A = [Symbol('A_s'), Symbol('A_p')]
     B = [Symbol('B_s'), Symbol('B_p')]
     if polar == 's':
-        return simplify(A[0]*(eps[1, 0] - custom_simp_2(eps[1, 2]*eps[2, 0], M)/eps_d) + B[0]*eps[2, 0])
+        return custom_simp_1(A[0]*(eps[1, 0] - custom_simp_2(eps[1, 2]*eps[2, 0], M)/eps_d) + B[0]*eps[2, 0])
     if polar == 'p':
-        return simplify(-A[1]*(eps[0, 1] - custom_simp_2(eps[2, 1]*eps[0, 2], M)/eps_d) + B[1]*eps[0, 2])
+        return custom_simp_1(-A[1]*(eps[0, 1] - custom_simp_2(eps[2, 1]*eps[0, 2], M)/eps_d) + B[1]*eps[0, 2])
 
 
 # eight directional method for kerr angles
@@ -123,4 +123,4 @@ def eightdir(kerr: Symbol):
     mlmt = nsimplify(kerr.subs('phi', 45*pi/180) + kerr.subs('phi', 225*pi/180) - kerr.subs('phi', 135*pi/180) - kerr.subs('phi', 315*pi/180))/2
     mtmlsq = nsimplify(kerr.subs('phi', 0) + kerr.subs('phi', pi) - kerr.subs('phi', 90*pi/180) - kerr.subs('phi', 270*pi/180))/2
 
-    return [simplify(ml), simplify(mt), simplify(mlmt), simplify(mtmlsq)]
+    return [custom_simp_1(simplify(ml)), custom_simp_1(simplify(mt)), custom_simp_1(simplify(mlmt)), custom_simp_1(simplify(mtmlsq))]

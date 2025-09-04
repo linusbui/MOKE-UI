@@ -1,1 +1,0 @@
--A_s*Delta_G*sin(4*alpha)/2

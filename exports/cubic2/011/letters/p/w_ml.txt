@@ -1,0 +1,1 @@
+B_p*(2*Delta_H*(1 - cos(2*alpha)) - 3*Delta_H*(-2*cos(2*alpha) + cos(4*alpha)/2 + 3/2)/2 - H1*(1 - cos(2*alpha)) + 3*H1*(-2*cos(2*alpha) + cos(4*alpha)/2 + 3/2)/4 - H1 + 3*H2*(1 - cos(2*alpha)) - 9*H2*(-2*cos(2*alpha) + cos(4*alpha)/2 + 3/2)/4 - 3*H2 - 2*K1)/2

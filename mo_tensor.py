@@ -295,7 +295,7 @@ def rewrite_H(H: Matrix):
     d_H = Symbol('Delta_H')
     H_temp = Symbol('temp')
 
-    H123_new = d_H - 3*H_temp
+    H123_new = d_H + 3*H_temp
     #pprint(H123_new)
     H125_new = (H123 - d_H)/3
 

@@ -118,13 +118,15 @@ def sep_symbols(expr, symb):
 def custom_simp_1(expr: Symbol):
     a = Symbol('alpha')
     with evaluate(False):
+        expr = expr.subs(sin(a)**2, 1/2*(1 - cos(2*a)))
+        expr = expr.subs(cos(a)**2, 1/2*(1 + cos(2*a)))
         expr = expr.subs(sin(a)**3, 1/4*(3*sin(a) - sin(3*a)))
         expr = expr.subs(sin(a)**4, 1/4*(1 - 2*cos(2*a) + 1/2*(1 + cos(4*a))))
         expr = expr.subs(sin(a)**5, 1/16*(10*sin(a) - 5*sin(3*a) + sin(5*a)))
         expr = expr.subs(sin(a)**6, 1/8*(1 - 3*cos(2*a) + 3/2*(1 + cos(4*a)) - 1/4*(3*cos(2*a) + cos(6*a))))
         expr = expr.subs(cos(a)**4, 1/4*(1 + 2*cos(2*a) + 1/2*(1 + cos(4*a))))
         expr = expr.subs(cos(a)**5, 1/16*(10*cos(a) + 5*cos(3*a) + cos(5*a)))
-    return simplify(TR8(nsimplify(expr)))
+    return (TR8(nsimplify(expr)))
 
 
 # used to neglect terms of order 4 or higher in kerr angle cross-term

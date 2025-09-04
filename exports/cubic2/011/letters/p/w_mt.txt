@@ -1,0 +1,1 @@
+B_p*(6*Delta_H*(sin(2*alpha) + sin(4*alpha)) - 2*Delta_H*sin(2*alpha) + 3*H1*(-sin(2*alpha) - sin(4*alpha)) + H1*sin(2*alpha) + 9*H2*(sin(2*alpha) + sin(4*alpha)) - 3*H2*sin(2*alpha))/16
