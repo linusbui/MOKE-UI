@@ -8,6 +8,7 @@ Installing the [required](requirements.txt) python packages via
 ```console
 pip install -r requirements.txt
 ```
+or other means
 
 ## Usage
 
