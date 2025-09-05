@@ -15,5 +15,6 @@ Just execute the moke_ui.py file via python and enjoy the UI. Note that the proj
 
 ## Current problems
 
++ Really long runtimes when first calculating the equations
 + Equations are not fully simplified using $\Delta G$ and $\Delta H$
 + Sign conventions are not the same as in the literature in all places, especially for the results of the eight-directional method
