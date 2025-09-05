@@ -1,0 +1,1 @@
+B_p*(2*Delta_H - H1 + 3*H2)*sin(4*alpha)/4

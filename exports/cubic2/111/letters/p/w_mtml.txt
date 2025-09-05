@@ -1,0 +1,1 @@
+-A_p*Delta_G/3 - 2*A_p*G3 + A_p*K1**2/epsilon_d - sqrt(2)*B_p*Delta_G*sin(3*alpha + pi/4)/3

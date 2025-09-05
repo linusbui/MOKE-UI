@@ -1,0 +1,1 @@
+B_p*(-2*Delta_H*cos(4*alpha) - 2*Delta_H + H1*cos(4*alpha) - H1 - 3*H2*cos(4*alpha) - 9*H2 - 4*K1)/4

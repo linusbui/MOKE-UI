@@ -1,0 +1,1 @@
+A_p*(Delta_G*epsilon_d*cos(4*alpha) - Delta_G*epsilon_d - 4*G3*epsilon_d + 2*K1**2)/(2*epsilon_d)

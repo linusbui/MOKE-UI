@@ -1,0 +1,1 @@
+sqrt(2)*B_s*Delta_G*cos(3*alpha + pi/4)/3
