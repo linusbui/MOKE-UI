@@ -1,0 +1,1 @@
+-5*A_s*Delta_G*sin(4*alpha)/16 + A_s*G4*sin(4*alpha)/16 - A_s*G5*sin(4*alpha)/16 + A_s*G6*sin(4*alpha)/4 - A_s*G7*sin(4*alpha)/8 + B_s*Delta_G*sin(alpha)/8 - B_s*Delta_G*sin(3*alpha)/8 + B_s*G4*sin(alpha)/8 - B_s*G4*sin(3*alpha)/8 - B_s*G5*sin(alpha)/8 + B_s*G5*sin(3*alpha)/8 - B_s*G6*sin(alpha)/2 - B_s*G6*sin(3*alpha)/2 + 3*B_s*G7*sin(alpha)/4 + B_s*G7*sin(3*alpha)/4

@@ -1,0 +1,1 @@
+A_s*G8*cos(4*alpha) + A_s*G8 - A_s*K1**2/epsilon_d + 2*B_s*G6*cos(3*alpha)
